@@ -461,6 +461,42 @@ img {
     flex-direction: row;
     column-gap    : 5.5rem;
   }
+  
+  .home__container{
+    width       : initial;
+    padding-top : 3rem;
+  }
+  .home__perfil{
+    width       : 600px;
+  }
+  .home__image .blob-animate{
+    width       : 450px;
+    height      : 450px;
+    bottom      : 2rem;  
+    filter      : blur(50px);
+  }
+  .home__shadow{
+    width       : 700px;
+    height      : 700px;
+    left        : 0;
+    right       : 0;
+    margin-inline: auto;
+    background  : linear-gradient(180deg,
+                  hsla(240, 100%, 2%, 0) 60%,
+                  hsl(240, 100%, 2%) 95%);
+  }
+  .home__data{
+    position    : absolute;
+    top         : 12rem;
+    left        : 3rem;
+    z-index     : 2;
+  }
+  .home__info{
+    top         : 12rem;
+    right       : 3rem;
+    bottom      : initial;
+  }
+
 }
 
 /* For 2K resolutions (2048 x 1152, 2048 x 1536) */
