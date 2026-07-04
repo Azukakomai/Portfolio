@@ -565,6 +565,14 @@ img {
   padding-bottom : 2rem;
 }
 
+.projects .swiper-pagination-bullets{
+  bottom          : 0;
+}
+
+.projects .swiper-pagination-bullet{
+  background-color: var(--first-color);
+  transition      : opacity .4s;
+}
 /*=============== WORK ===============*/
 
 
