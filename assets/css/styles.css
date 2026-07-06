@@ -660,10 +660,18 @@ img {
 }
 
 /* Show & hide sections */
+.work__content[data-content]{
+  display         : none;
+}
 
+.work__content.work-active[data-content]{
+  display         : grid;
+}
 
 /* Active tab */
-
+.work__button.work-active{
+  color: var(--first-color);
+}
 
 /*=============== SERVICES ===============*/
 
