@@ -70,7 +70,17 @@ tabs.forEach((tab) => {
 
 
 /*=============== TESTIMONIALS OF DUPLICATE CARDS ===============*/
+// Duplicate Images
 
+const tracks = document.querySelectorAll('.testimonials__content')
+
+tracks.forEach(track => {
+  const cards = [...track.children] 
+
+  for (const card of cards) {
+    track.appendChild(card.cloneNode(true))
+  }
+})
 
 /*=============== COPY EMAIL IN CONTACT ===============*/
 
