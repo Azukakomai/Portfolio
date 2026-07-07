@@ -385,6 +385,8 @@ img {
 
 /*=============== BUTTON ===============*/
 .button{
+  position        : relative;
+  z-index         : 2;
   background-color: var(--body-color);
   border          : 3px solid var(--first-color);
   color           : var(--title-color);
@@ -397,7 +399,7 @@ img {
   display         : inline-flex;
   align-items     : center;
   column-gap      : .5rem;
-  transition      : box-shadow .4s;
+  transition      : box-shadow .4s, transform .4s;
 }
 
 .button i{
@@ -408,6 +410,7 @@ img {
 .button:hover{
   box-shadow      : 0 8px 48px hsla(var(--hue), 60%, 64%, .7),
                     inset 8px -8px 30px var(--first-color-alt-2);
+  transform       : translateY(-2px);
 }
 
 
@@ -417,6 +420,8 @@ img {
 }
 
 .about__container{
+  position    : relative;
+  z-index     : 2;
   row-gap     : 3rem;
   overflow-y  : clip;
 }
@@ -461,7 +466,8 @@ img {
   height      : 258px;
   position    : absolute;
   bottom      : 1rem;
-  z-index     : 1;
+  z-index     : 0;
+  pointer-events: none;
   background  : linear-gradient(180deg,
                 hsla(240, 100%, 2%, 0) 60%,
                 var(--body-color) 95%);
