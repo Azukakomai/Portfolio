@@ -386,7 +386,7 @@ img {
 /*=============== BUTTON ===============*/
 .button{
   position        : relative;
-  z-index         : 2;
+  /* z-index         : 2; */
   background-color: var(--body-color);
   border          : 3px solid var(--first-color);
   color           : var(--title-color);
@@ -421,7 +421,7 @@ img {
 
 .about__container{
   position    : relative;
-  z-index     : 2;
+  /* z-index     : 2; */
   row-gap     : 3rem;
   overflow-y  : clip;
 }
@@ -466,8 +466,7 @@ img {
   height      : 258px;
   position    : absolute;
   bottom      : 1rem;
-  z-index     : 0;
-  pointer-events: none;
+  z-index     : 1;
   background  : linear-gradient(180deg,
                 hsla(240, 100%, 2%, 0) 60%,
                 var(--body-color) 95%);
@@ -1049,6 +1048,33 @@ img {
 
   .work__subtitle, .work__description{
     font-size : var(--h3-font-size);
+  }
+
+  .testimonials__container{
+    row-gap   : 3rem;
+  }
+
+  .testimonials__container::after, .testimonials__container::before{
+    content   : '';
+    position  : absolute;
+    top       : 0;
+    width     : 20%;
+    height    : 100%;
+  }
+
+  .testimonials__container::after{
+    left: 0;
+    background: linear-gradient(90deg, 
+            var(--body-color) 0%, 
+            transparent 100%);
+  }
+
+  .testimonials__container::before{
+    right     : 0;
+    z-index   : 1;
+    background: linear-gradient(90deg, 
+                transparent 0%,            
+                var(--body-color) 100%);
   }
 }
 
