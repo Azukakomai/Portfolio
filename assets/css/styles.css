@@ -386,7 +386,7 @@ img {
 /*=============== BUTTON ===============*/
 .button{
   position        : relative;
-  /* z-index         : 2; */
+  z-index         : 2;
   background-color: var(--body-color);
   border          : 3px solid var(--first-color);
   color           : var(--title-color);
@@ -1075,6 +1075,16 @@ img {
     background: linear-gradient(90deg, 
                 transparent 0%,            
                 var(--body-color) 100%);
+  }
+  
+  .testimonials__card{
+    width       : 370px;
+    padding     : 3rem 2rem;
+    border-radius : 4rem;
+  }
+
+  .testimonials__numbers{
+    font-size   : var(--normal-font-size);
   }
 }
 
