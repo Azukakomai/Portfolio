@@ -237,13 +237,14 @@ img {
 .nav__link:hover{
   color           : var(--first-color);
   text-shadow     : 0 8px 16px var(--first-color);
-
-  ;
 }
 
 
 /* Active link */
-
+.active-link{
+  color       : var(--first-color);
+  text-shadow : 0 8px 16px var(--first-color);
+}
 
 /*=============== HOME ===============*/
 .home{
@@ -859,10 +860,37 @@ img {
 
 
 /*=============== FOOTER ===============*/
+.footer{
+  position      : relative;
+  padding-block : 5rem 2rem;
+  text-align    : center;
+  /* row-gap       : 1rem; */
+  overflow      : hidden;
+}
 
+.footer .blob-animate{
+  right: -3rem;
+  bottom: -3rem;
+}
 
 /*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar{
+  width             : .6rem;
+  background-color  : hsl(240, 6%, 12%);
+  border-radius     : .5rem;
+}
 
+::-webkit-scrollbar-thumb{
+  /* width             : .6rem; */
+  background-color  : hsl(240, 6%, 20%);
+  border-radius     : .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  /* width             : .6rem; */
+  background-color  : hsl(240, 6%, 24%);
+  /* border-radius     : .5rem; */
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
@@ -1175,9 +1203,32 @@ img {
   .contact__content{
     grid-template-columns : repeat(3, 1fr);
   }
+
+  .contact__info{
+    row-gap       : 1.5rem;
+    justify-self: flex-start;
+  }
+
+  .contact__write{
+    justify-self  : flex-end;
+  }
+
+  .contact__title{
+    margin-bottom : .75rem;
+  }
+
+  .contact__links{
+    row-gap       : .5rem;
+  }
+
+  .contact__link{
+    font-size     : 1.25rem;
+  }
 }
 
 /* For 2K resolutions (2048 x 1152, 2048 x 1536) */
-
-
-/* Custom cursor is hidden for mobile devices */
+@media screen and (min-width: 2048px){
+  body{
+    zoom: 1.4;
+  }
+}

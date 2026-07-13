@@ -66,7 +66,7 @@ tabs.forEach((tab) => {
   })
 })
 
-/*=============== SERVICES ACCORDION ===============*/
+/*=============== CERTIFICATES ACCORDION ===============*/
 
 
 /*=============== TESTIMONIALS OF DUPLICATE CARDS ===============*/
@@ -120,16 +120,36 @@ if (phoneBtn) {
   });
 }
 
-/*=============== CURRENT YEAR OF THE FOOTER ===============*/ 
-
-
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+const sections = document.querySelectorAll('section[id]')
 
+const scrollActive = () => {
+  const scrollY = window.scrollY
 
-/*=============== CUSTOM CURSOR ===============*/
+  sections.forEach(section => {
+    const id = section.id
+      top = section.offsetTop - 50,
+      height = section.offsetHeight,
+      link = document.querySelector('.nav__menu a[href*=' + id + ']')
+    if(!link) return
 
-
-/* Hide custom cursor on links */
-
+    link.classList.toggle('active-link', scrollY > top && scrollY <= top + height)
+  })
+}
+window.addEventListener('scroll', scrollActive)
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+  origin    : 'top',
+  distance  : '60px',
+  duration  : 2000,
+  delay     : 300,
+  reset     : true,
+})
+
+sr.reveal('.home__image, .projects__container, .work__container, .testimonials__container, .contact__container')
+sr.reveal('.home__data', {delay:  900, origin: 'bottom'})
+sr.reveal('.home__info', {delay:  1200, origin: 'bottom'})
+sr.reveal('.home__social, .home__cv', {delay:  1500})
+sr.reveal('.about__data', {origin: 'left'})
+sr.reveal('.about__image', {origin: 'right'})
