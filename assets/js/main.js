@@ -96,6 +96,30 @@ copyBtn.addEventListener('click', () => {
   })
 })
 
+/*=============== COPY PHONE NUMBER ===============*/
+
+const phoneBtn = document.querySelector('.copy__phone');
+
+if (phoneBtn) {
+  phoneBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    
+    const phoneNumber = phoneBtn.dataset.phone;
+    
+    navigator.clipboard.writeText(phoneNumber).then(() => {
+  
+      const originalText = phoneBtn.innerHTML;
+      phoneBtn.innerHTML = 'Phone copied <i class="ri-check-line"></i>';
+      
+      setTimeout(() => {
+        phoneBtn.innerHTML = originalText;
+      }, 2000);
+    }).catch(() => {
+      alert('Failed to copy phone number');
+    });
+  });
+}
+
 /*=============== CURRENT YEAR OF THE FOOTER ===============*/ 
 
 
